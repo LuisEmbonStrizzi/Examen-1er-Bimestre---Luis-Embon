@@ -8,7 +8,7 @@ public class Tema5CASA : MonoBehaviour
     public int precioProducto1, precioProducto2, precioProducto3;
     public int unidadesProducto1, unidadesProducto2, unidadesProducto3;
 
-    int descuentoProd1 = 0, descuentoProd2 = 0, descuentoProd3 = 0, SindescuentoProd1, SindescuentoProd2, SindescuentoProd3, montoTotalSinDescuento, montoDeLosDecuentos, montoTotalConDescuentos;
+    int descuentoProd1 = 0, descuentoProd2 = 0, descuentoProd3 = 0, montoTotalSinDescuento, montoDeLosDecuentos, montoTotalConDescuentos;
 
     // Start is called before the first frame update
     void Start()
@@ -24,20 +24,20 @@ public class Tema5CASA : MonoBehaviour
             if (unidadesProducto1 > 3) 
             {
                 descuentoProd1 = (precioProducto1 * unidadesProducto1) / 100 * 20;
-                SindescuentoProd1 = 0;
+                
             }
             if (unidadesProducto2 > 3)
             {
                 descuentoProd2 = (precioProducto2 * unidadesProducto2) / 100 * 20;
-                SindescuentoProd2 = 0;
+                
             }
             if (unidadesProducto3 > 3)
             {
                 descuentoProd3 = (precioProducto3 * unidadesProducto3) / 100 * 20;
-                SindescuentoProd3 = 0;
+                
             }
 
-            montoDeLosDecuentos = descuentoProd1 + descuentoProd2 + descuentoProd3 + SindescuentoProd1 + SindescuentoProd2 + SindescuentoProd3;
+            montoDeLosDecuentos = descuentoProd1 + descuentoProd2 + descuentoProd3;
             montoTotalConDescuentos = montoTotalSinDescuento - montoDeLosDecuentos;
 
             Debug.Log("El monto total sin descuento es: $" + montoTotalSinDescuento);
